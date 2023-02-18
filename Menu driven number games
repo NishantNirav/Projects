@@ -1,0 +1,342 @@
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+#include<dos.h>
+
+
+char nm[20];
+
+void main()
+{
+
+ void g1();
+ void g2();
+ void g3();
+ void g4();
+ void g5();
+ void ex();
+   int opt;
+
+   clrscr();
+    gotoxy(20,2) ;
+   printf("#####################################");
+   gotoxy(34,3);
+   printf("W E L C O M E");
+   gotoxy(20,4);
+   printf("#####################################");
+   gotoxy(20,6);
+   printf("Enter your name : ");
+   scanf("%s",&nm);
+   clrscr();
+   gotoxy(25,12);
+   printf("Welcome %s \n\n\n",nm);
+   printf("                         press a key to continue....");
+    getch();
+  while(1)
+ {
+   clrscr();
+  gotoxy(20,1);
+  printf("#####################################");
+  gotoxy(34,2);
+  printf("M E N U E");
+  gotoxy(20,3);
+  printf("#####################################");
+  gotoxy(20,7);
+  printf("1. Guess Bro and Sis");
+  gotoxy(20,9);
+  printf("2. I Can Guess Your Result (I)");
+  gotoxy(20,11);
+  printf("3. I Can guess Your Result (II)");
+  gotoxy(20,13);
+  printf("4. Numer guess(I)");
+  gotoxy(20,15);
+  printf("5. Numer guess(II)");
+  gotoxy(20,19);
+  printf("Press -->  Esc  <-- to Exit  ");
+  gotoxy(20,21);
+  printf("select the game ");
+  gotoxy(20,22);
+  printf("INPUT: ");
+  fflush(stdin);
+  opt=getch();
+  printf("%s",opt);
+  switch(opt)
+   {
+     case 49:
+       g1(); 		//1
+       break;
+     case 50:
+	g2();
+       break;
+     case 51 :           //3
+       g3();
+       break;
+     case 52:
+      g4();
+      break;  	      //4
+     case 53:
+       g5();
+       break;          //5
+     case 27:
+       ex();
+       break;
+		   //exit
+   }
+ }
+
+}
+
+void g1()
+{
+   int ans,temp,b,s;
+   clrscr();
+   gotoxy(20,1);
+   printf("#####################################");
+   gotoxy(34,3);
+   printf("Guess Bro and Sis");
+   gotoxy(20,4);
+   printf("#####################################");
+   gotoxy(21,5);
+   printf("Think How many brother and sister you are: ");
+   delay(2000);
+   printf("\n\nTimes Up !!! \n\n");
+   delay(2000);
+   printf("Double you brother\n");
+   delay(2000);
+   printf("Rember the result in last step \n");
+   delay(2000);
+   printf("multiply the result with 5 \n");
+   delay(200);
+   printf("Add the No of sisters in the prev result \n");
+   delay(2000);
+   printf("plese give me the result : ");
+   scanf("%d",&ans);
+   s=ans%10;
+   b=ans/10;
+   for(int i=1;i<10000;i++)
+   {
+    clrscr();
+     gotoxy(20,10);
+
+     for(int j=1;j<50;j++)
+     {
+       printf(".");
+     }
+
+   }
+  clrscr();
+  gotoxy(20,9);
+  printf("END Is over \n\n");
+  gotoxy(20,11);
+  printf("You'r Lucky %s you have %d brothers and %d sisters ",nm,b,s);
+  getch();
+}
+
+void g2()
+{
+   int in;
+   clrscr();
+   gotoxy(20,1);
+   printf("#####################################");
+   gotoxy(34,3);
+   printf("I Can Guess Your Result (I)");
+   gotoxy(20,4);
+   printf("#####################################");
+   gotoxy(21,5);
+   printf("Think a no b/w 1 -10 \n\n");
+   delay(2000);
+   printf("Times UP !!!\n\n");
+   delay(2000);
+   printf("Multiply your number with 3\n ");
+   delay(2000);
+   printf("Again multiply the result with 3 \n");
+   delay(1500);
+   printf("Result is single digit or double digit \n");
+   scanf("%d",&in);
+   if(in==1)
+    {
+      for(int i=1;i<10000;i++)
+      {
+      clrscr();
+       gotoxy(20,10);
+	 for(int j=1;j<50;j++)
+	    {
+	      printf(".");
+	    }
+       }
+
+    clrscr();
+    gotoxy(20,10);
+    printf("Final result is 9 ");
+  }
+   else
+   printf("O doble digit....\n\n");
+   printf("Add both the digit\n\n");
+   printf("                                  press a key to continue ....");
+   getch();
+
+     for(int i=1;i<10000;i++)
+      {
+	clrscr();
+	gotoxy(20,10);
+
+	for(int j=1;j<50;j++)
+	 {
+	   printf(".");
+	 }
+      }
+
+    clrscr();
+    gotoxy(20,10);
+   printf("Final Result is 9 ");
+   getch();
+
+}
+
+
+void g3()
+{
+   clrscr();
+   gotoxy(20,1);
+   printf("#####################################");
+   gotoxy(34,3);
+   printf("I Can Guess Your Result (II)");
+   gotoxy(20,4);
+   printf("#####################################");
+   gotoxy(20,6);
+   printf("Please select an 3-digit : \n");
+   printf("\n digits should not repeat\n");
+   delay(1500);
+   printf("Reverse your number \n ");
+   delay(1500);
+   printf("Substract the numbers \t (larger -smaler)\n" ) ;
+   delay(1500);
+   printf("Got the result :\n") ;
+   delay(600);
+   printf("If the result is a 2-digit no then \n use 0 as prefix \n" );
+   delay(700);
+   printf("You have final result ,  Okkkkk\n");
+   printf("Find the sum of result and its reverse\n\n");
+   printf("Gussing....    \t\t press a key");
+   getch();
+    for(int i=1;i<10000;i++)
+   {
+    clrscr();
+     gotoxy(20,10);
+
+     for(int j=1;j<50;j++)
+     {
+       printf(".");
+     }
+
+   }
+   clrscr();
+   gotoxy(20,11);
+   printf("So final result is 1089 is'n it ");
+
+
+   getch();
+}
+
+
+void g4()
+{
+   int in,rso,temp;
+
+
+   clrscr();
+   gotoxy(20,1);
+   printf("#####################################");
+   gotoxy(34,3);
+   printf("I Can Guess Your Result (III)");
+   gotoxy(20,4);
+   printf("#####################################");
+   gotoxy(20,6);
+   printf("Think a 3-digit no wit no repeation\n");
+   delay(2000);
+   printf("Reverse the no \n");
+   delay(2000);
+   printf("Substarct both the no  \t\t(greater-smaller)\n" );
+   printf("Rember the result\n");
+   delay(2000);
+   printf("please give me the unit place of the Result:\n");
+   printf("INPUT : ");
+   gotoxy(48,11);
+   scanf("%d",&in);
+   temp=9-in;
+   temp*=100;
+   rso= temp+(9*10)+in;
+
+
+     for(int i=1;i<10000;i++)
+   {
+    clrscr();
+     gotoxy(20,10);
+
+     for(int j=1;j<50;j++)
+     {
+       printf(".");
+     }
+   }
+   clrscr();
+   gotoxy(20,6);
+   printf("Wait is over !!! " ) ;
+   gotoxy(20,10);
+   printf("Your result was : %d",rso);
+   getch();
+}
+
+
+void g5()
+{
+   int in,rso;
+   clrscr();
+   gotoxy(20,1);
+   printf("#####################################");
+   gotoxy(34,3);
+   printf("Number Guess (II)");
+   gotoxy(20,4);
+   printf("#####################################");
+   gotoxy(20,6);
+   printf("Think a 2-digit No \n");
+   delay(2000);
+   printf("Find the sum of the digits \n");
+   delay(2000);
+   printf("Substract the result from original no \n");
+   delay(1500);
+   printf("You are done \n ");
+   printf("Give me any digit of the result: " );
+   gotoxy(22,10);
+   scanf("%d",&in);
+
+
+     for(int i=1;i<10000;i++)
+   {
+    clrscr();
+     gotoxy(20,10);
+
+     for(int j=1;j<50;j++)
+     {
+       printf(".");
+     }
+   }
+   rso=9-in;
+   gotoxy(20,10);
+   printf("Another Digit of your result is %d",rso);
+   getch();
+ }
+
+
+
+void ex()
+{
+   clrscr();
+   char in;
+   gotoxy(20,12);
+   printf("Are you sure you want to exit  Y \ N");
+   in= getch();
+   if(in=='y' || in=='Y')
+     exit(0);
+   else
+     return;
+}
